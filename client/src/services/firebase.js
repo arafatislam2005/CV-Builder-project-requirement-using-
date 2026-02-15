@@ -1,18 +1,20 @@
-import { initializeApp } from 'firebase/app';
-import { getAuth, GoogleAuthProvider } from 'firebase/auth';
-import { getStorage } from 'firebase/storage';
+import { initializeApp } from "firebase/app";
+import { getAuth, GoogleAuthProvider } from "firebase/auth";
+import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  apiKey: "AIzaSyB0EoWnWj0Rd6BH5YDv4egbrazhr5UQGeg",
+  authDomain: "cv-builder-project-2e998.firebaseapp.com",
+  projectId: "cv-builder-project-2e998",
+  storageBucket: "cv-builder-project-2e998.appspot.com",
+  messagingSenderId: "819250189571",
+  appId: "1:819250189571:web:20ddd436fffee00dd1c536",
 };
 
 const app = initializeApp(firebaseConfig);
+
 export const auth = getAuth(app);
-export const googleProvider = new GoogleAuthProvider();
 export const storage = getStorage(app);
-export default app;
+
+// ✅ ADD THIS (You are missing this)
+export const googleProvider = new GoogleAuthProvider();
