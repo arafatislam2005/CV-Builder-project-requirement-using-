@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CV Print Styles – keep these as custom CSS since they're for the PDF render */
+@layer components {
+  .cv-preview {
+    @apply bg-white mx-auto shadow-lg text-sm leading-relaxed text-gray-800;
+    width: 210mm;
+    min-height: 297mm;
+    padding: 20mm;
+    font-size: 10pt;
+  }
+  .cv-preview h1 {
+    font-size: 22pt;
+    @apply mb-1;
+  }
+  .cv-preview h2 {
+    font-size: 13pt;
+    @apply text-primary border-b-2 border-primary pb-1 mt-4 mb-2.5 uppercase tracking-wide;
+  }
+  .cv-preview h3 {
+    font-size: 11pt;
+    @apply mb-0.5;
+  }
+  .cv-preview .contact-info {
+    @apply flex flex-wrap gap-4 text-gray-500 mb-3;
+    font-size: 9pt;
+  }
+  .cv-preview .contact-info span {
+    @apply flex items-center gap-1;
+  }
+  .cv-preview .experience-item,
+  .cv-preview .education-item {
+    @apply mb-3;
+  }
+  .cv-preview .item-header {
+    @apply flex justify-between items-baseline;
+  }
+  .cv-preview .item-date {
+    @apply text-gray-400 whitespace-nowrap;
+    font-size: 9pt;
+  }
+  .cv-preview .item-subtitle {
+    @apply text-gray-500 mb-1;
+    font-size: 9.5pt;
+  }
+  .cv-preview .skills-list {
+    @apply flex flex-wrap gap-2;
+  }
+  .cv-preview .skill-tag {
+    @apply px-3 py-0.5 bg-blue-50 rounded-full text-primary;
+    font-size: 9pt;
+  }
+
+  /* Corporate template */
+  .cv-corporate {
+    font-family: 'Georgia', serif;
+  }
+  .cv-corporate h2 {
+    @apply text-gray-900 border-gray-900;
+  }
+  .cv-corporate .skill-tag {
+    @apply bg-gray-100 text-gray-800 border border-gray-300 rounded;
+  }
+
+  /* Minimal template */
+  .cv-minimal {
+    padding: 15mm;
+  }
+  .cv-minimal h1 {
+    @apply font-light;
+    font-size: 20pt;
+  }
+  .cv-minimal h2 {
+    @apply text-gray-500 font-light border-gray-200;
+    font-size: 11pt;
+  }
+  .cv-minimal .skill-tag {
+    @apply bg-transparent p-0 text-gray-800;
+    font-size: 9.5pt;
+  }
+  .cv-minimal .skills-list {
+    @apply gap-1;
+  }
+
+  /* ATS template */
+  .cv-ats {
+    font-family: 'Arial', sans-serif;
+    padding: 15mm 20mm;
+  }
+  .cv-ats h1 {
+    @apply uppercase;
+    font-size: 16pt;
+  }
+  .cv-ats h2 {
+    @apply text-black border-black font-bold;
+    font-size: 11pt;
+  }
+  .cv-ats .skill-tag {
+    @apply bg-transparent rounded-none p-0 text-gray-800;
+  }
+}
+
+/* Spinner */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.spinner {
+  @apply w-10 h-10 border-[3px] border-gray-200 rounded-full;
+  border-top-color: #1a56db;
+  animation: spin 0.8s linear infinite;
+}
