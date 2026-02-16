@@ -90,12 +90,3 @@ async function run() {
         // Keep connection open
     }
 }
-run().catch(console.dir);
-
-app.get('/', (req, res) => {
-    res.send('ProCV UAE Server is running');
-});
-
-app.listen(port, () => {
-    console.log(`🚀 Server is running on port: ${port}`);
-});
