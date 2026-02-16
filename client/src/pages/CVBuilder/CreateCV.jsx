@@ -76,7 +76,7 @@ export default function CreateCV() {
 
           <PersonalInfoSection data={cvData.personalInfo} onChange={(val) => updateField('personalInfo', val)} />
 
-          {/* Career Objective */}
+
           <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
             <h3 className="text-lg font-semibold mb-4 pb-3 border-b border-gray-200">Career Objective</h3>
             <div className="mb-0">
