@@ -56,7 +56,7 @@ export default function CreateCV() {
 
       <form onSubmit={handleSubmit}>
         <div className="flex flex-col gap-6">
-          {/* Title & Template */}
+
           <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
             <h3 className="text-lg font-semibold mb-4 pb-3 border-b border-gray-200">CV Details</h3>
             <div className="mb-4">
